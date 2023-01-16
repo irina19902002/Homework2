@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Massiv_zikl_uslov {
+public class MassivZiklUslov {
     public static void main(String[] args) {
 //Составить программу, которая уменьшает первое введенное число в два раза, если оно больше второго введенного числа по абсолютной величине.
         System.out.println("Введите 2 числа");
@@ -29,7 +29,7 @@ public class Massiv_zikl_uslov {
             t++;
         }
         System.out.println("Наибольшее натуральное число,которое не превышает 5000 и делится нацело на 39: " + z);
-
+//
 // Заполнить массив из десяти элементов значениями, вводимыми с клавиатуры в ходе выполнения программы.
         int c;
         int r;
