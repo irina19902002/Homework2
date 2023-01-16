@@ -31,8 +31,8 @@ public class Massiv_zikl_uslov {
         System.out.println("Наибольшее натуральное число,которое не превышает 5000 и делится нацело на 39: " + z);
 
 // Заполнить массив из десяти элементов значениями, вводимыми с клавиатуры в ходе выполнения программы.
-        int c; //schetchik
-        int r; //schetchik
+        int c;
+        int r;
         double[] num = new double[10];
         for (c = 0; c < 10; c++) {
             System.out.println("Введите значение элемента массива: ");
