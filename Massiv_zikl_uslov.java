@@ -48,18 +48,25 @@ public class Massiv_zikl_uslov {
 // за какой месяц величина ежемесячного увеличения вклада превысит 30 руб.;
 // через сколько месяцев размер вклада превысит 1200 руб.
         double telovklada = 1000;
-        double uvelichenie = 0;
+        double uvelichenie = 30;
+        int nummes;
         int mes = 0;
+        int mesU = 0;
+        String[] meses = {"Январь","Февраль","Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"};
         do {
             mes++;
-            uvelichenie = telovklada * 2;
+            uvelichenie = telovklada * 2.0 / 100;
             telovklada = telovklada + uvelichenie;
+            if (uvelichenie > 30)
+            {
+                mesU = mes;
+            }
 
         }
-        while (telovklada <= 1200 || uvelichenie <= 30);
-
-        if (telovklada > 1200) {
-            System.out.println("Вклад превысит 1200 через " + mes + " месяцев");
+        while (telovklada <= 1200);
+        System.out.println("Вклад превысит 1200 через " + mes + " месяцев");
+        if (uvelichenie <= 30)
+        {
             do {
                 mes++;
                 uvelichenie = telovklada * 2.0 / 100;
@@ -67,23 +74,22 @@ public class Massiv_zikl_uslov {
 
             }
             while (uvelichenie <= 30);
-            System.out.println("величина ежемесячного увеличения вклада превысит 30 руб за " + mes + " месяц");
-        } else {
-            System.out.println("величина ежемесячного увеличения вклада превысит 30 руб за " + mes + " месяц");
-            do {
-
-                mes++;
-                uvelichenie = telovklada * 2.0 / 100;
-                telovklada = telovklada + uvelichenie;
-
+            mesU = mes;
+        }
+            if (mesU > 10) {
+                nummes = (1 + mesU % 12);
+               System.out.println("величина ежемесячного увеличения вклада превысит 30 руб за " + meses[nummes] + " месяц");
+                System.out.println("Прошло с начала вклада " + mesU + " месяцa");
             }
-            while (telovklada <= 1200);
-            System.out.println("Вклад превысит 1200 через " + mes + " месяцев");
+           else
+            {System.out.println("величина ежемесячного увеличения вклада превысит 30 руб за " + meses[1+mes] + " месяц");
+            System.out.println("Прошло с начала вклада " + mesU + " месяцa");}
+
         }
 
     }
 
-}
+
 
 
 
