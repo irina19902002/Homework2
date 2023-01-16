@@ -52,7 +52,7 @@ public class Massiv_zikl_uslov {
         int nummes;
         int mes = 0;
         int mesU = 0;
-        String[] meses = {"Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"};
+        String[] meses = {"Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь", "Январь", "Февраль"};
         do {
             mes++;
             uvelichenie = telovklada * 2.0 / 100;
@@ -74,12 +74,12 @@ public class Massiv_zikl_uslov {
             while (uvelichenie <= 30);
             mesU = mes;
         }
-        if (mesU > 10) {
-            nummes = (1 + mesU % 12);
+        if (mesU >= 12) {
+            nummes = ( mesU % 12 -1);
             System.out.println("величина ежемесячного увеличения вклада превысит 30 руб за " + meses[nummes] + " месяц");
             System.out.println("Прошло с начала вклада " + mesU + " месяцa");
         } else {
-            System.out.println("величина ежемесячного увеличения вклада превысит 30 руб за " + meses[1 + mes] + " месяц");
+            System.out.println("величина ежемесячного увеличения вклада превысит 30 руб за " + meses[mes-1] + " месяц");
             System.out.println("Прошло с начала вклада " + mesU + " месяцa");
         }
 
