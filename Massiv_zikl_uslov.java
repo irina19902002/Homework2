@@ -74,12 +74,12 @@ public class Massiv_zikl_uslov {
             while (uvelichenie <= 30);
             mesU = mes;
         }
-        if (mesU >= 12) {
-            nummes = ( mesU % 12 -1);
+        if (mesU > 12) {
+            nummes = (mesU % 12 - 1);
             System.out.println("величина ежемесячного увеличения вклада превысит 30 руб за " + meses[nummes] + " месяц");
             System.out.println("Прошло с начала вклада " + mesU + " месяцa");
         } else {
-            System.out.println("величина ежемесячного увеличения вклада превысит 30 руб за " + meses[mes-1] + " месяц");
+            System.out.println("величина ежемесячного увеличения вклада превысит 30 руб за " + meses[mes - 1] + " месяц");
             System.out.println("Прошло с начала вклада " + mesU + " месяцa");
         }
 
