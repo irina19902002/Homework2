@@ -10,7 +10,6 @@ public class Massiv_zikl_uslov {
         {
             System.out.println(x/2.0);
         }
-
 //Напечатать числа с помощью цикла for следующим образом:
 //	10 10.4
 //	11 11.4
@@ -60,12 +59,11 @@ public class Massiv_zikl_uslov {
             mes++;
             uvelichenie = telovklada*2.0/100;
             telovklada = telovklada+uvelichenie;
-
         }
-        while (telovklada<= 1200);
-        System.out.println("Вклад превысит 1200 через " + mes+ " месяцев");
-        if(uvelichenie <= 30)
-        {
+        while (telovklada <= 1200 && uvelichenie <=30);
+
+        if(telovklada > 1200)
+        { System.out.println("Вклад превысит 1200 через " + mes+ " месяцев");
             do
             {
                 mes++;
@@ -74,8 +72,21 @@ public class Massiv_zikl_uslov {
 
             }
             while (uvelichenie<= 30);
+            System.out.println("величина ежемесячного увеличения вклада превысит 30 руб за " + mes+ " месяц");
         }
-        System.out.println("величина ежемесячного увеличения вклада превысит 30 руб за " + mes+ " месяц");
+        else {
+            System.out.println("величина ежемесячного увеличения вклада превысит 30 руб за " + mes+ " месяц");
+            do {
+
+                mes++;
+                uvelichenie = telovklada * 2.0 / 100;
+                telovklada = telovklada + uvelichenie;
+
+            }
+            while (telovklada <= 1200);
+            System.out.println("Вклад превысит 1200 через " + mes+ " месяцев");
+        }
+
     }
 
 }
