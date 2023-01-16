@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Massiv_zikl_uslov {
+public class MassivZiklUslov {
     public static void main(String[] args) {
 //Составить программу, которая уменьшает первое введенное число в два раза, если оно больше второго введенного числа по абсолютной величине.
         System.out.println("Введите 2 числа");
